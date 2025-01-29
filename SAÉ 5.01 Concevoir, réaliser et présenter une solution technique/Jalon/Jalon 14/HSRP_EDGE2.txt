@@ -1,0 +1,23 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2024.12.11 15:12:05 =~=~=~=~=~=~=~=~=~=~=~=
+
+EDGE2#conf tsh runconf t      sh stnadbyadby andby
+GigabitEthernet0/1.30 - Group 1 (version 2)
+  State is Standby
+    1 state change, last state change 00:08:29
+  Virtual IP address is 217.2.160.6
+  Active virtual MAC address is 0000.0c9f.f001
+    Local virtual MAC address is 0000.0c9f.f001 (v2 default)
+  Hello time 3 sec, hold time 10 sec
+    Next hello sent in 0.960 secs
+  Preemption disabled
+  Active router is 217.2.160.4, priority 150 (expires in 9.968 sec)
+    MAC address is 58f3.9c98.fdd1
+  Standby router is local
+  Priority 100 (default 100)
+  Group name is "hsrp-Gi0/1.30-1" (default)
+EDGE2#sh standby brief
+                     P indicates configured to preempt.
+                     |
+Interface   Grp  Pri P State   Active          Standby         Virtual IP
+Gi0/1.30    1    100   Standby 217.2.160.4     local           217.2.160.6
+EDGE2#

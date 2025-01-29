@@ -1,0 +1,188 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2024.12.11 14:33:56 =~=~=~=~=~=~=~=~=~=~=~=
+
+EDGE1>en
+EDGE1#sh run
+Building configuration...
+
+
+Current configuration : 2540 bytes
+!
+! Last configuration change at 09:14:27 UTC Wed Dec 11 2024
+!
+version 15.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname EDGE1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+voice-card 0
+!
+!
+!
+!
+!
+!
+!
+!
+license udi pid CISCO2901/K9 sn FCZ1837C1FY
+hw-module ism 0
+!
+hw-module pvdm 0/0
+!
+!
+!
+!
+redundancy
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 191.5.157.33 255.255.255.240
+!
+interface Embedded-Service-Engine0/0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/0.1
+ encapsulation dot1Q 13
+ ip address 10.2.254.42 255.255.255.252
+!
+interface GigabitEthernet0/0.2
+ encapsulation dot1Q 14
+ ip address 91.2.222.98 255.255.255.252
+!
+interface ISM0/0
+ no ip address
+ shutdown
+ !Application: CUE Running on ISM
+!
+interface GigabitEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/1.100
+ encapsulation dot1Q 100
+ ip address 10.2.254.14 255.255.255.252
+!
+interface GigabitEthernet0/1.300
+ encapsulation dot1Q 300
+ ip address 10.2.254.1 255.255.255.252
+!
+interface ISM0/1
+ no ip address
+!
+interface Vlan1
+ no ip address
+!
+router ospf 1
+ router-id 2.2.2.2
+ redistribute connected subnets
+ network 10.2.254.40 0.0.0.3 area 2
+ network 10.2.0.0 0.0.255.255 area 2
+!
+router bgp 65216
+ bgp log-neighbor-changes
+ neighbor 10.2.254.2 remote-as 65216
+ neighbor 10.2.254.2 update-source GigabitEthernet0/1.300
+ neighbor 91.2.222.97 remote-as 65230
+ !
+ address-family ipv4
+  network 10.2.254.0 mask 255.255.255.252
+  network 91.2.222.96 mask 255.255.255.252
+  neighbor 10.2.254.2 activate
+  neighbor 91.2.222.97 activate
+ exit-address-family
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+!
+control-plane
+!
+ !
+ !
+ !
+ !
+!
+mgcp behavior rsip-range tgcp-only
+mgcp behavior comedia-role none
+mgcp behavior comedia-check-media-src disable
+mgcp behavior comedia-sdp-force disable
+!
+mgcp profile default
+!
+!
+!
+!
+!
+!
+!
+gatekeeper
+ shutdown
+!
+!
+!
+line con 0
+line aux 0
+line 2
+ no activation-character
+ no exec
+ transport preferred none
+ transport output pad telnet rlogin lapb-ta mop udptn v120 ssh
+ stopbits 1
+line 67
+ no activation-character
+ no exec
+ transport preferred none
+ transport input all
+ transport output pad telnet rlogin lapb-ta mop udptn v120 ssh
+ stopbits 1
+line vty 0 4
+ login
+ transport input none
+!
+scheduler allocate 20000 1000
+!
+end
+
+EDGE1#

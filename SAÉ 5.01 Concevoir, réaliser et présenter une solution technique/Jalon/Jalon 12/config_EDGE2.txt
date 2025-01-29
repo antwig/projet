@@ -1,0 +1,171 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2024.12.11 14:36:20 =~=~=~=~=~=~=~=~=~=~=~=
+
+EDGE2>en
+EDGE2#sh run
+Building configuration...
+
+
+Current configuration : 2431 bytes
+!
+! Last configuration change at 11:30:33 UTC Wed Dec 11 2024
+! NVRAM config last updated at 12:55:12 UTC Wed Dec 11 2024
+! NVRAM config last updated at 12:55:12 UTC Wed Dec 11 2024
+version 15.1
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname EDGE2
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+!
+no ipv6 cef
+ip source-route
+ip cef
+!
+!
+!
+!
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+crypto pki token default removal timeout 0
+!
+!
+voice-card 0
+!
+!
+!
+!
+!
+!
+!
+license udi pid CISCO2901/K9 sn FCZ1647910P
+license accept end user agreement
+license boot module c2900 technology-package securityk9
+license boot module c2900 technology-package uck9
+license boot module c2900 technology-package datak9
+!
+!
+!
+redundancy
+!
+!
+!
+!
+! 
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 191.5.157.34 255.255.255.240
+!
+interface Embedded-Service-Engine0/0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/0.1
+ encapsulation dot1Q 15
+ ip address 10.2.254.30 255.255.255.252
+!
+interface GigabitEthernet0/0.2
+ encapsulation dot1Q 16
+ ip address 31.2.126.14 255.255.255.252
+!
+interface GigabitEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/1.200
+ encapsulation dot1Q 200
+ ip address 10.2.254.22 255.255.255.252
+!
+ interface GigabitEthernet0/1.300
+ encapsulation dot1Q 300
+ ip address 10.2.254.2 255.255.255.252
+!
+!
+router ospf 1
+ router-id 3.3.3.3
+ redistribute connected subnets
+ network 10.2.254.28 0.0.0.3 area 2
+ network 10.2.0.0 0.0.255.255 area 2
+!
+router bgp 65216
+ bgp log-neighbor-changes
+ neighbor 10.2.254.1 remote-as 65216
+ neighbor 10.2.254.1 update-source GigabitEthernet0/1.300
+ neighbor 31.2.126.13 remote-as 65230
+ !
+ address-family ipv4
+  network 10.2.254.0 mask 255.255.255.252
+  network 31.2.126.12 mask 255.255.255.252
+  neighbor 10.2.254.1 activate
+  neighbor 31.2.126.13 activate
+ exit-address-family
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+!
+mgcp profile default
+!
+!
+!
+!
+!
+gatekeeper
+shutdown
+!
+!
+!
+line con 0
+line aux 0
+line 2
+ no activation-character
+ no exec
+ transport preferred none
+ transport input all
+ transport output lat pad telnet rlogin lapb-ta mop udptn v120 ssh
+ stopbits 1
+line vty 0 4
+ login
+ transport input all
+!
+scheduler allocate 20000 1000
+end
+
+EDGE2#
