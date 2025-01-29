@@ -1,7 +1,7 @@
 # Projet SAE 501 – Concevoir, réaliser et présenter une solution technique 
 
 ## Description  
-Ce projet, réalisé dans le cadre d'une SAE, consiste à concevoir et déployer une infrastructure réseau complète pour une entreprise fictive, **WorldSkills Lyon 2024 (WSL2024)**.  
+Ce projet, réalisé dans le cadre d'une SAE, consiste à concevoir et déployer une infrastructure réseau complète pour une entreprise fictive.  
 L'objectif est d'assurer la **connectivité et la sécurisation des services informatiques** sur plusieurs sites (siège, site distant, Internet). Il inclut :  
 - La **configuration des équipements réseau** (switches, routeurs, firewall).  
 - L’**administration des services IT**.  
