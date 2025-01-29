@@ -1,11 +1,10 @@
-
-# 🏴‍☠️ CTF Étudiant 
+# 🏴‍☠️ CTF Étudiant  
 
 ## 📌 Présentation  
 Ce **Capture The Flag (CTF)** est organisé par les étudiants de **3e année** pour les **étudiants de 1re et 2e année** du BUT Réseaux et Télécommunications.  
 L’objectif est de proposer une **expérience ludique et pédagogique**, permettant aux participants de développer leurs compétences en **cybersécurité**, d'apprendre à exploiter des vulnérabilités et d'améliorer leur raisonnement logique.  
 
-📅 **Événement en cours de préparation**   
+📅 **Événement en cours de préparation**  
 
 ---
 
@@ -30,3 +29,18 @@ Le CTF est structuré en plusieurs **catégories**, couvrant différents aspects
 | **📡 Réseaux**       | Sniffer, analyser et exploiter des paquets et protocoles réseau. |
 | **🖼️ Stéganographie** | Trouver des informations cachées dans des fichiers multimédias. |
 | **🔍 Crackme/Reverse** | Décompiler, désassembler et analyser des programmes pour en comprendre le fonctionnement. |
+
+---
+
+## 🔓 Focus sur la catégorie **Exploit**  
+La catégorie **Exploit**, que je gère, est dédiée à l’**exploitation de vulnérabilités** dans des systèmes et applications.  
+Les challenges permettront d’explorer différentes techniques utilisées par les attaquants pour prendre le contrôle d’un système, en mettant l’accent sur :  
+
+- **Analyse des services vulnérables** : Identification des ports ouverts et des services exposés (`nmap`, `enum4linux`, `smbclient`...).  
+- **Exploitation de failles connues** : Utilisation de bases de données d’exploits (`Exploit-DB`, `Metasploit`, `searchsploit`).  
+- **Développement d’exploits personnalisés** : Compréhension des failles pour créer ses propres codes d’exploitation.  
+- **Techniques de contournement de protections** : ASLR, DEP, buffer overflow, format string attacks...  
+- **Élévation de privilèges** : Exploitation de failles système (`GTFOBins`, `sudo -l`, `Linux Capabilities`).  
+- **Post-exploitation** : Maintien d’un accès (`reverse shell`, `persistence`, `pivoting`).  
+
+🎯 **Les participants devront identifier des failles sur des machines vulnérables, les exploiter et récupérer les flags cachés !**  
