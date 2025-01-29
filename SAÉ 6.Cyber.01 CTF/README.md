@@ -44,3 +44,17 @@ Les challenges permettront d’explorer différentes techniques utilisées par l
 - **Post-exploitation** : Maintien d’un accès (`reverse shell`, `persistence`, `pivoting`).  
 
 🎯 **Les participants devront identifier des failles sur des machines vulnérables, les exploiter et récupérer les flags cachés !**  
+
+---
+
+## 🎓 Ce que ce projet m'apporte  
+Participer à l'organisation de ce **CTF étudiant** est une expérience enrichissante à plusieurs niveaux :    
+
+- Approfondir mes **compétences en cybersécurité**, notamment en exploitation de vulnérabilités.  
+- Renforcer mes connaissances sur des outils et techniques avancées utilisés par les pentesters.  
+- Améliorer ma **capacité à concevoir des défis pédagogiques et engageants**.  
+- Développer des compétences en **gestion de projet et travail d'équipe**, en collaborant avec d'autres étudiants.  
+- Contribuer à la formation des étudiants de 1re et 2e année en leur proposant des challenges adaptés à leur niveau.  
+
+Ce projet me donne une **expérience concrète** en conception de challenges CTF et en **transmission des connaissances**, des atouts essentiels pour évoluer dans le domaine de la cybersécurité. 🔥  
+
