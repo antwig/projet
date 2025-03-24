@@ -2,9 +2,7 @@
 
 ## 📌 Présentation  
 Ce **Capture The Flag (CTF)** est organisé par les étudiants de **3e année** pour les **étudiants de 1re et 2e année** du BUT Réseaux et Télécommunications.  
-L’objectif est de proposer une **expérience ludique et pédagogique**, permettant aux participants de développer leurs compétences en **cybersécurité**, d'apprendre à exploiter des vulnérabilités et d'améliorer leur raisonnement logique.  
-
-📅 **Événement en cours de préparation**  
+L’objectif est de proposer une **expérience ludique et pédagogique**, permettant aux participants de développer leurs compétences en **cybersécurité**, d'apprendre à exploiter des vulnérabilités et d'améliorer leur raisonnement logique.   
 
 ---
 
@@ -21,7 +19,7 @@ Le CTF est structuré en plusieurs **catégories**, couvrant différents aspects
 
 | 🔢 **Catégorie**        | 🎯 **Description** |
 |----------------------|-------------------|
-| **🔓 Exploit**       | Identifier et exploiter des failles dans des applications et systèmes vulnérables. *(Géré par les étudiants de 3e année, dont moi)*. |
+| **🔓 Exploit**       | Identifier et exploiter des failles dans des applications et systèmes vulnérables. |
 | **🔐 Crypto**        | Décrypter des messages chiffrés et analyser des algorithmes de cryptographie. |
 | **🕵️‍♂️ Forensic**    | Analyser des fichiers, des mémoires et des systèmes pour en extraire des preuves. |
 | **🖥️ Serveur**       | Identifier des failles dans des services réseau et des configurations systèmes. |
@@ -33,7 +31,7 @@ Le CTF est structuré en plusieurs **catégories**, couvrant différents aspects
 ---
 
 ## 🔓 Focus sur la catégorie **Exploit**  
-La catégorie **Exploit**, que je gère, est dédiée à l’**exploitation de vulnérabilités** dans des systèmes et applications.  
+La catégorie **Exploit**, que je co-gère, est dédiée à l’**exploitation de vulnérabilités** dans des systèmes et applications.  
 Les challenges permettront d’explorer différentes techniques utilisées par les attaquants pour prendre le contrôle d’un système, en mettant l’accent sur :  
 
 - **Analyse des services vulnérables** : Identification des ports ouverts et des services exposés (`nmap`, `enum4linux`, `smbclient`...).  
@@ -55,6 +53,4 @@ Participer à l'organisation de ce **CTF étudiant** est une expérience enrichi
 - Améliorer ma **capacité à concevoir des défis pédagogiques et engageants**.  
 - Développer des compétences en **gestion de projet et travail d'équipe**, en collaborant avec d'autres étudiants.  
 - Contribuer à la formation des étudiants de 1re et 2e année en leur proposant des challenges adaptés à leur niveau.  
-
-Ce projet me donne une **expérience concrète** en conception de challenges CTF et en **transmission des connaissances**, des atouts essentiels pour évoluer dans le domaine de la cybersécurité. 🔥  
 
